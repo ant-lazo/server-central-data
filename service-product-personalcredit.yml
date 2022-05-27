@@ -12,3 +12,11 @@ eureka:
         default-zone: http://localhost:8761/eureka
   instance:
      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+cloud:
+  discovery:
+    enabled: true
+  gateway:
+    discovery:
+      locator:
+        enabled: true
+        lower-case-service-id: true
