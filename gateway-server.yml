@@ -11,10 +11,13 @@ eureka:
      hostname: localhost
 spring:
   cloud:
+     discovery:
+        enabled: true
      gateway:
         discovery:
           locator:
              enabled: true
+             lower-case-service-id: true
         routes:
           - id: service-customers
             uri: lb://service-customers

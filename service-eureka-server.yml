@@ -9,11 +9,3 @@ eureka:
      instance:
         hostname: localhost
         prefer-ip-address: true
-cloud:
-  discovery:
-    enabled: true
-  gateway:
-    discovery:
-      locator:
-        enabled: true
-        lower-case-service-id: true
