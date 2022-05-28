@@ -5,8 +5,10 @@ spring:
     mongodb:
         uri: mongodb+srv://user:omarlazopassword@clusterbootcamp.28gww.mongodb.net/db_product?retryWrites=true&w=majority
 eureka:
+  instance:
+    hostname: localhost
   client:
-     fetch-registry: true
-     register-with-eureka: true
-     service-url:
-        default-zone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://${eureka.instance.hostname}:8761/eureka/
