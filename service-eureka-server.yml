@@ -5,10 +5,10 @@ eureka:
   instance:
     #hostname: localhost
     #nombre del contenedor de doker
-    hostname: eureka-server
+    hostname: service-eureka-server
     prefer-ip-address: true
   client:
     fetch-registry: false
     register-with-eureka: false
     service-url:
-      default-zone: http://eureka-server:${server.port}/eureka/
+      default-zone: http://service-eureka-server:${server.port}/eureka/
