@@ -3,7 +3,9 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    #hostname: localhost
+    #nombre del contenedor de doker
+    hostname: eureka-server
     prefer-ip-address: true
   client:
     fetch-registry: false
