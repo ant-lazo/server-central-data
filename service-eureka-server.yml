@@ -3,12 +3,12 @@ server:
 
 eureka:
   instance:
-    #hostname: localhost
+    hostname: localhost
     #nombre del contenedor de doker
-    hostname: service-eureka-container
+    #hostname: service-eureka-container
     prefer-ip-address: true
   client:
     fetch-registry: false
     register-with-eureka: false
     service-url:
-      default-zone: http://service-eureka-container:8761/eureka/
+      default-zone: http://${eureka.instance.hostname}:8761/eureka/
