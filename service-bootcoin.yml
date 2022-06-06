@@ -9,12 +9,12 @@ kafka:
 
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-server: localhost:9092
     consumer:
       group-id: transaction-group
       auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.commom.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.commom.serialization.StringDeserializer
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
   cache:
     type: redis
   redis:
