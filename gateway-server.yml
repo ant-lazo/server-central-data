@@ -59,6 +59,8 @@ spring:
             - Path=/transactionPerson/**
         - id: service-rate-bootcoin
           uri: lb://service-rate-bootcoin
+        - id: service-bootcoin
+          uri: lb://service-bootcoin
 
 
 
