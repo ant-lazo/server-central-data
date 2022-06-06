@@ -40,3 +40,6 @@ kafka:
     name: bootcoin-request
   topic-to-publish:
     name: bootcoin-response
+
+rate-bootcoin-api:
+  base-url: http://localhost:8080
