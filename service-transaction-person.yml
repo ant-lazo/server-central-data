@@ -2,9 +2,21 @@ server:
   port: 8026
 
 spring:
+  kafka:
+    bootstrap-server: localhost:9092
+    consumer:
+      group-id: transaction-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.commom.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.commom.serialization.StringDeserializer
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
   data:
     mongodb:
-        uri: mongodb+srv://user:omarlazopassword@clusterbootcamp.28gww.mongodb.net/db_transaction_person?retryWrites=true&w=majority
+      uri: mongodb+srv://user:omarlazopassword@clusterbootcamp.28gww.mongodb.net/db_transaction_person?retryWrites=true&w=majority
   cloud:
     discovery:
       enabled: true
@@ -13,7 +25,7 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-          
+
 eureka:
   instance:
     hostname: localhost
@@ -22,3 +34,9 @@ eureka:
     register-with-eureka: true
     service-url:
       default-zone: http://${eureka.instance.hostname}:8761/eureka/
+
+kafka:
+  subscribed-topic:
+    name: bootcoin-request
+  topic-to-publish:
+    name: bootcoin-response
