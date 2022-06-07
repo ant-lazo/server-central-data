@@ -1,6 +1,6 @@
 server:
-  port: 8025
-
+  #port: 8025
+  port: 8071
 spring:
   data:
     mongodb:
